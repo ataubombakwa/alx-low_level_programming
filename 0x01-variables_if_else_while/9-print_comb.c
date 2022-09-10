@@ -9,19 +9,22 @@
 int main(void)
 {
 	int n;
+	char word;
 
 	for (n = 0; n < 10; n++)
-	{
+
+
 	putchar((n % 10) + '0');
 
-	if (n < 9)
+
+	for (word = 'a'; word <= 'f'; word++)
+	putchar(word);
+
 	{
-	putchar(',');
-	putchar(' ');
-	}
+	putchar('\n');
 	}
 
-	putchar('\n');
+
 
 	return (0);
 
