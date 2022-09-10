@@ -8,17 +8,14 @@
 
 int main(void)
 {
-	int n;
-	char word;
+	int Ch;
 
-	for (n = 0; n < 10; n++)
+	for (Ch = 'a'; Ch <= 'z'; Ch++)
+	{
 
+	putchar(Ch);
 
-		putchar((n % 10) + '0');
-
-		for (word = 'a'; word <= 'f'; word++)
-		putchar(word);
-
+	}
 
 	{
 	putchar('\n');
