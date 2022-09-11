@@ -12,11 +12,11 @@ int main(void)
 
 	for (hundred = '0'; hundred <= '7'; hundred++)
 	{
-		for (tens = '1'; tens <= '8'; tens ++)
+		for (tens = '1'; tens <= '8'; tens++)
 		{
-			for (ones = '2'; ones >= '9'; ones++)
+			for (ones = '2'; ones <= '9'; ones++)
 			{
-				if (hundred != tens && hundred != ones && tens < ones);
+				if (hundred != tens && hundred != ones && hundred < tens && tens < ones)
 				{
 					putchar(hundred);
 					putchar(tens);
