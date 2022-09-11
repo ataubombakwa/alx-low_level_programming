@@ -23,9 +23,8 @@ int main(void)
 				if (tens == 98 && ones == 99)
 					continue;
 			   		putchar(',');
-				putchar(' ');
+					putchar(' ');
 		}
-
 	}
 	putchar('\n');
 	return (0);
