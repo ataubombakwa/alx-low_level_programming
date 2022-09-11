@@ -15,15 +15,16 @@ int main(void)
 	{
 		for (ones = tens + 1; ones <= 99; ones++)
 		{
-				putchar((tens / 10) + '0');
-				putchar((tens % 10) + '0');
+			putchar((tens / 10) + '0');
+			putchar((tens % 10) + '0');
+			putchar(' ');
+			putchar((ones / 10) + '0');
+			putchar((ones % 10) + '0');
+			if (!(tens == 98 && ones == 99))
+			{
+				putchar(',');
 				putchar(' ');
-				putchar((ones / 10) + '0');
-				putchar((ones % 10) + '0');
-				if (tens == 98 && ones == 99)
-					continue;
-			   	putchar(',');
-				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
