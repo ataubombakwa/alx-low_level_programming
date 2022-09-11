@@ -22,8 +22,8 @@ int main(void)
 				putchar((ones % 10) + '0');
 				if (tens == 98 && ones == 99)
 					continue;
-			   		putchar(',');
-					putchar(' ');
+			   	putchar(',');
+				putchar(' ');
 		}
 	}
 	putchar('\n');
