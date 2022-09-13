@@ -6,7 +6,7 @@
 
 #include "main.h"
 
-int main(void)
+void print(void)
 {
 	char c;
 
@@ -16,6 +16,4 @@ int main(void)
 		_putchar(c);
 	}
 _putchar('\n');
-
-	return(0);
 }
