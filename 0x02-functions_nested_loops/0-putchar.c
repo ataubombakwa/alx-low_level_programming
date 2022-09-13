@@ -4,6 +4,8 @@
   * Author: ATAUBO MBAKWA ANJOANEI
   */
 
+#include "main.h"
+
 int main(void)
 {
 	char c;
