@@ -1,21 +1,18 @@
 /**
-  * main - Entry point
+  * main - print putchar
   * Return: Always 0 (Success)
-  * print_alphabet (void) - function print _putchar in lowercase alphabet
   * Author: ATAUBO MBAKWA ANJOANEI
   */
 
-#include "main.h"
-
-void print_alphabet(void)
+int main(void)
 {
 	char c;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (c = 'a'; c <= 'c'; c++)
 	{
 		_putchar(c);
 	}
 	_putchar('\n');
 
-	return (0);
+	return (0)
 }
