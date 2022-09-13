@@ -8,13 +8,14 @@
 
 int main(void)
 {
-	char c;
-
-	for (c = 'a'; c <= 'z'; c++)
-	{
-		_putchar(c);
-	}
-	_putchar('\n');
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('a');
+	_putchar('r');
+	_putcahr('\n');
 
 	return (0);
 }
