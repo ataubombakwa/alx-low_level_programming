@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * print_sign - prints the sign of a number 
+  * print_sign - prints the sign of a number<F12>
   * @n: is int that will use for the argument of the function
   * Return: 1 and prints + if n is greater than 0
   * 0 and prints - if n is less than zero
