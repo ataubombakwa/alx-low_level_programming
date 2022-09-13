@@ -6,7 +6,7 @@
 
 #include "main.h"
 
-void print_alaphabet(void)
+int main(void)
 {
 	char c;
 
