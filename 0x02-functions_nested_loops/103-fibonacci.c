@@ -1,4 +1,4 @@
-*
+/*
  * File: 103-fibonacci.c
  * Auth: Ataubo Mbakwa Anjoanei
  */
