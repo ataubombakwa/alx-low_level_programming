@@ -3,7 +3,7 @@
  * Auth: Ataubo Mbakwa Anjoanei
  */
 
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _strcmp - Compares pointers to two strings.
