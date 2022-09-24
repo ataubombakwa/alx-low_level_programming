@@ -1,7 +1,4 @@
-/**
- * File name: 103-infinite_add.c
- * Author: Ataubo Mbakwa Anjoanei
- */
+#include "coding.h"
 
 /**
  * infinite_add - function with 4 arguments
@@ -33,4 +30,4 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		count2--;
 	}
 	return (r);
-}
+}}
