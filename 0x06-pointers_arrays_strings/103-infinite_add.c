@@ -3,9 +3,6 @@
  * Author: Ataubo Mbakwa Anjoanei
  */
 
-
-#include "main.h"
-
 /**
  * infinite_add - function with 4 arguments
  * @n1: char type pointer argument
