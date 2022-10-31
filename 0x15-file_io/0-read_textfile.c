@@ -1,48 +1,44 @@
 #include "main.h"
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 /**
- * read_textfile -.
- *Description: function that reads a text file and prints it to the std output
- * @filename: contain the name of the file to read
- * @letters: number of letters to read
- * Return: the number of char writed.
- **/
+ * read_textfile - reads a certain amount of letters from a file
+ * @filename: name of file
+ * @letters: how many letters to read
+ * Return: the number of letters
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	char *buf;
-	ssize_t wr = 0, rd = 0;
+	/* declarations */
+	int fd, retVal, writeVal;
+	char *buffer = malloc(sizeof(char) * letters);
 
-	if (filename == NULL)
+	if (buffer == NULL || filename == NULL)
 		return (0);
 
-	fd = open(filename, O_RDONLY); /*open file an return file descriptor*/
-
-	if (fd == -1)
-		return (0);
-
-	buf = malloc(sizeof(char) * letters);
-
-	if (buf == NULL)
-		return (0);
-/*we use file descriptor to do thigns to the file (read or writwe, etc)*/
-/*from disc to ram, the letters are transfered to my buf in ram*/
-	rd = read(fd, buf, letters);
-	if (rd == -1)
+	fd = open(filename, O_RDONLY);
+	if (fd < 0)
 	{
-		free(buf);
+		free(buffer);
 		return (0);
 	}
-/*copy from ram to stdoutput not in disk, stdout:*/
-/*special file that point to the terminal*/
-	wr = write(STDOUT_FILENO, buf, rd);
-
-	if (wr == -1)
+	retVal = read(fd, buffer, letters);
+	if (retVal < 0)
 	{
-		free(buf);
+		close(fd);
+		free(buffer);
 		return (0);
 	}
+	writeVal = write(STDOUT_FILENO, buffer, retVal);
+	if (writeVal < 0 || writeVal != retVal)
+	{
+		close(fd);
+		free(buffer);
+		return (0);
+	}
+	free(buffer);
 	close(fd);
-	free(buf);
-
-	return (wr);
+	return (retVal);
 }
